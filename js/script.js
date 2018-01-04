@@ -7,13 +7,17 @@ elValue.textContent = value;
 console.log(value);
 
 var msg;
+var elHide = document.getElementById('hide');
 
 if (value > 0) {
 	msg = 'Jest to wynik dodatni';
 } else if (value < 0) {
 	msg = 'Jest to wynik ujemny';
-} else {
+} else if (value === 0) {
     msg = 'Jest to wynik zerowy';
+} else {
+	elHide.style.display = "none";
+	msg = 'Nieprawidłowe dane';
 }
 
 console.log(msg);
